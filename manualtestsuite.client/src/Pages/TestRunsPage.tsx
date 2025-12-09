@@ -1,6 +1,7 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useState, type FormEvent } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import '../Projects.css'
+import Modal from '../components/Modal'
 
 type TestRun = {
     id: number
@@ -21,6 +22,7 @@ const TestRunsPage = () => {
     const [result, setResult] = useState('Passed')
     const [comment, setComment] = useState('')
     const [executedBy, setExecutedBy] = useState('')
+    const [isRunModalOpen, setRunModalOpen] = useState(false)
 
     const loadRuns = async () => {
         if (!projectId || !suiteId || !caseId) return
@@ -44,7 +46,7 @@ const TestRunsPage = () => {
         loadRuns()
     }, [projectId, suiteId, caseId])
 
-    const onCreateRun = async (e: React.FormEvent) => {
+    const onCreateRun = async (e: FormEvent) => {
         e.preventDefault()
         if (!projectId || !suiteId || !caseId) return
         try {
@@ -59,6 +61,7 @@ const TestRunsPage = () => {
             if (!res.ok) throw new Error(`Status ${res.status}`)
             setComment('')
             await loadRuns()
+            setRunModalOpen(false)
         } catch (err: any) {
             alert('Error creating test run: ' + (err.message ?? 'Unknown error'))
         }
@@ -71,11 +74,60 @@ const TestRunsPage = () => {
     return (
         <div className="projects-container">
             <div className="column">
-                <button className="primary-button"  onClick={() => navigate(-1)}>← Back</button>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginBottom: 12,
+                    }}
+                >
+                    <button
+                        type="button"
+                        className="primary-button"
+                        onClick={() => navigate(-1)}
+                    >
+                        ← Back
+                    </button>
+                    <button
+                        type="button"
+                        className="primary-button"
+                        onClick={() => setRunModalOpen(true)}
+                    >
+                        + Add Test Run
+                    </button>
+                </div>
+
                 <h2>
                     Test Runs for project {projectId}, suite {suiteId}, case {caseId}
                 </h2>
 
+                {loading && <p>Loading runs…</p>}
+                {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+
+                <ul>
+                    {runs.map((r) => (
+                        <li key={r.id}>
+                            <strong>{r.result}</strong>{' '}
+                            <small>
+                                at {new Date(r.executedAt).toLocaleString()}
+                                {r.executedBy ? ` by ${r.executedBy}` : ''}
+                            </small>
+                            {r.comment && (
+                                <div>
+                                    <small>Comment: {r.comment}</small>
+                                </div>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <Modal
+                isOpen={isRunModalOpen}
+                title="Add Test Run"
+                onClose={() => setRunModalOpen(false)}
+            >
                 <form onSubmit={onCreateRun}>
                     <div>
                         <label>
@@ -110,29 +162,11 @@ const TestRunsPage = () => {
                             />
                         </label>
                     </div>
-                    <button type="submit" className="primary-button">Add Test Run</button>
+                    <button type="submit" className="primary-button">
+                        Save
+                    </button>
                 </form>
-
-                {loading && <p>Loading runs…</p>}
-                {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-
-                <ul>
-                    {runs.map((r) => (
-                        <li key={r.id}>
-                            <strong>{r.result}</strong>{' '}
-                            <small>
-                                at {new Date(r.executedAt).toLocaleString()}
-                                {r.executedBy ? ` by ${r.executedBy}` : ''}
-                            </small>
-                            {r.comment && (
-                                <div>
-                                    <small>Comment: {r.comment}</small>
-                                </div>
-                            )}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            </Modal>
         </div>
     )
 }

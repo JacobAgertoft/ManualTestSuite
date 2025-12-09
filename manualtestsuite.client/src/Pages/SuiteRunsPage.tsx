@@ -1,34 +1,38 @@
 ﻿import { useEffect, useState, type FormEvent } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import '../Projects.css'
 import Modal from '../components/Modal'
 
-type TestSuite = {
+type TestRun = {
     id: number
     name: string
-    description?: string
+    createdAt: string
+    createdBy?: string
 }
 
-const SuitesPage = () => {
-    const { projectId } = useParams()
+const SuiteRunsPage = () => {
+    const { projectId, suiteId } = useParams()
     const navigate = useNavigate()
-    const [suites, setSuites] = useState<TestSuite[]>([])
+
+    const [runs, setRuns] = useState<TestRun[]>([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
 
     const [name, setName] = useState('')
-    const [description, setDescription] = useState('')
-    const [isSuiteModalOpen, setSuiteModalOpen] = useState(false)
+    const [createdBy, setCreatedBy] = useState('')
+    const [isRunModalOpen, setRunModalOpen] = useState(false)
 
-    const loadSuites = async () => {
-        if (!projectId) return
+    const loadRuns = async () => {
+        if (!projectId || !suiteId) return
         try {
             setLoading(true)
             setError(null)
-            const res = await fetch(`/api/projects/${projectId}/testsuites`)
+            const res = await fetch(
+                `/api/projects/${projectId}/testsuites/${suiteId}/runs`,
+            )
             if (!res.ok) throw new Error(`Status ${res.status}`)
             const json = await res.json()
-            setSuites(json)
+            setRuns(json)
         } catch (err: any) {
             setError(err.message ?? 'Unknown error')
         } finally {
@@ -37,30 +41,33 @@ const SuitesPage = () => {
     }
 
     useEffect(() => {
-        loadSuites()
-    }, [projectId])
+        loadRuns()
+    }, [projectId, suiteId])
 
-    const onCreateSuite = async (e: FormEvent) => {
+    const onCreateRun = async (e: FormEvent) => {
         e.preventDefault()
-        if (!projectId) return
+        if (!projectId || !suiteId) return
         try {
-            const res = await fetch(`/api/projects/${projectId}/testsuites`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, description }),
-            })
+            const res = await fetch(
+                `/api/projects/${projectId}/testsuites/${suiteId}/runs`,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, createdBy }),
+                },
+            )
             if (!res.ok) throw new Error(`Status ${res.status}`)
             setName('')
-            setDescription('')
-            await loadSuites()
-            setSuiteModalOpen(false)
+            // keep createdBy if you like
+            await loadRuns()
+            setRunModalOpen(false)
         } catch (err: any) {
-            alert('Error creating test suite: ' + (err.message ?? 'Unknown error'))
+            alert('Error creating run: ' + (err.message ?? 'Unknown error'))
         }
     }
 
-    if (!projectId) {
-        return <p>Missing project id in URL.</p>
+    if (!projectId || !suiteId) {
+        return <p>Missing project or suite id in URL.</p>
     }
 
     return (
@@ -84,65 +91,68 @@ const SuitesPage = () => {
                     <button
                         type="button"
                         className="primary-button"
-                        onClick={() => setSuiteModalOpen(true)}
+                        onClick={() => setRunModalOpen(true)}
                     >
-                        + Add Test Suite
+                        + New Run
                     </button>
                 </div>
 
-                <h2>Test Suites for project {projectId}</h2>
+                <h2>
+                    Runs for project {projectId}, suite {suiteId}
+                </h2>
 
-                {loading && <p>Loading suites…</p>}
+                {loading && <p>Loading runs…</p>}
                 {error && <p style={{ color: 'red' }}>Error: {error}</p>}
 
                 <ul>
-                    {suites.map((s) => (
-                        <li key={s.id}>
-                            <strong>{s.name}</strong>{' '}
-                            {s.description && <span>- {s.description}</span>}
+                    {runs.map((r) => (
+                        <li key={r.id}>
+                            <strong>{r.name}</strong>
                             <div>
-                                <Link to={`/projects/${projectId}/suites/${s.id}/cases`}>
-                                    View test cases
-                                </Link>
+                                <small>
+                                    Created at {new Date(r.createdAt).toLocaleString()}
+                                    {r.createdBy ? ` by ${r.createdBy}` : ''}
+                                </small>
                             </div>
                             <div>
-                                <Link to={`/projects/${projectId}/suites/${s.id}/runs`}>
-                                    View runs
+                                <Link
+                                    to={`/projects/${projectId}/suites/${suiteId}/runs/${r.id}`}
+                                >
+                                    Open run
                                 </Link>
                             </div>
                         </li>
                     ))}
                 </ul>
-
             </div>
 
             <Modal
-                isOpen={isSuiteModalOpen}
-                title="Add Test Suite"
-                onClose={() => setSuiteModalOpen(false)}
+                isOpen={isRunModalOpen}
+                title="Start New Run"
+                onClose={() => setRunModalOpen(false)}
             >
-                <form onSubmit={onCreateSuite}>
+                <form onSubmit={onCreateRun}>
                     <div>
                         <label>
                             Name
                             <input
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                required
+                                placeholder="e.g. Regression 2025-01-12"
                             />
                         </label>
                     </div>
                     <div>
                         <label>
-                            Description
+                            Created by
                             <input
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
+                                value={createdBy}
+                                onChange={(e) => setCreatedBy(e.target.value)}
                             />
                         </label>
                     </div>
                     <button type="submit" className="primary-button">
-                        Save
+                        Create run
                     </button>
                 </form>
             </Modal>
@@ -150,4 +160,4 @@ const SuitesPage = () => {
     )
 }
 
-export default SuitesPage
+export default SuiteRunsPage

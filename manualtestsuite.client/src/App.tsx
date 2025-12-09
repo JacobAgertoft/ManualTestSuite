@@ -2,8 +2,9 @@ import { Routes, Route, Link } from 'react-router-dom'
 import ProjectsPage from './pages/ProjectsPage'
 import SuitesPage from './pages/SuitesPage'
 import TestCasesPage from './pages/TestCasesPage'
-import TestRunsPage from './pages/TestRunsPage'
-import './Projects.css' // reuse your styling if you like
+import SuiteRunsPage from './pages/SuiteRunsPage'
+import RunDetailPage from './pages/RunDetailPage'
+import './Projects.css'
 
 function App() {
     return (
@@ -23,8 +24,12 @@ function App() {
                         element={<TestCasesPage />}
                     />
                     <Route
-                        path="/projects/:projectId/suites/:suiteId/cases/:caseId/runs"
-                        element={<TestRunsPage />}
+                        path="/projects/:projectId/suites/:suiteId/runs"
+                        element={<SuiteRunsPage />}
+                    />
+                    <Route
+                        path="/projects/:projectId/suites/:suiteId/runs/:runId"
+                        element={<RunDetailPage />}
                     />
                 </Routes>
             </main>

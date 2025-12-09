@@ -1,6 +1,7 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useState, type FormEvent } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import '../Projects.css'
+import Modal from '../components/Modal'
 
 type TestCase = {
     id: number
@@ -21,6 +22,7 @@ const TestCasesPage = () => {
     const [title, setTitle] = useState('')
     const [steps, setSteps] = useState('')
     const [expectedResult, setExpectedResult] = useState('')
+    const [isCaseModalOpen, setCaseModalOpen] = useState(false)
 
     const loadCases = async () => {
         if (!projectId || !suiteId) return
@@ -44,7 +46,7 @@ const TestCasesPage = () => {
         loadCases()
     }, [projectId, suiteId])
 
-    const onCreateCase = async (e: React.FormEvent) => {
+    const onCreateCase = async (e: FormEvent) => {
         e.preventDefault()
         if (!projectId || !suiteId) return
         try {
@@ -61,6 +63,7 @@ const TestCasesPage = () => {
             setSteps('')
             setExpectedResult('')
             await loadCases()
+            setCaseModalOpen(false)
         } catch (err: any) {
             alert('Error creating test case: ' + (err.message ?? 'Unknown error'))
         }
@@ -73,11 +76,63 @@ const TestCasesPage = () => {
     return (
         <div className="projects-container">
             <div className="column">
-                <button className="primary-button"  onClick={() => navigate(-1)}>← Back</button>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginBottom: 12,
+                    }}
+                >
+                    <button
+                        type="button"
+                        className="primary-button"
+                        onClick={() => navigate(-1)}
+                    >
+                        ← Back
+                    </button>
+                    <button
+                        type="button"
+                        className="primary-button"
+                        onClick={() => setCaseModalOpen(true)}
+                    >
+                        + Add Test Case
+                    </button>
+                </div>
+
                 <h2>
                     Test Cases for project {projectId}, suite {suiteId}
                 </h2>
 
+                {loading && <p>Loading test cases…</p>}
+                {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+
+                <ul>
+                    {cases.map((c) => (
+                        <li key={c.id}>
+                            <strong>{c.title}</strong>{' '}
+                            {c.status && c.status !== 'NotRun' && (
+                                <span className={`status-${c.status.toLowerCase()}`}>
+                                    ({c.status})
+                                </span>
+                            )}
+                            <div>
+                                <small>Steps: {c.steps || '(none)'}</small>
+                            </div>
+                            <div>
+                                <small>Expected: {c.expectedResult || '(none)'}</small>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+
+            </div>
+
+            <Modal
+                isOpen={isCaseModalOpen}
+                title="Add Test Case"
+                onClose={() => setCaseModalOpen(false)}
+            >
                 <form onSubmit={onCreateCase}>
                     <div>
                         <label>
@@ -109,38 +164,11 @@ const TestCasesPage = () => {
                             />
                         </label>
                     </div>
-                    <button type="submit" className="primary-button">Add Test Case</button>
+                    <button type="submit" className="primary-button">
+                        Save
+                    </button>
                 </form>
-
-                {loading && <p>Loading test cases…</p>}
-                {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-
-                <ul>
-                    {cases.map((c) => (
-                        <li key={c.id}>
-                            <strong>{c.title}</strong>{' '}
-                            {c.status && c.status !== 'NotRun' && (
-                                <span className={`status-${c.status.toLowerCase()}`}>
-                                    ({c.status})
-                                </span>
-                            )}
-                            <div>
-                                <small>Steps: {c.steps || '(none)'}</small>
-                            </div>
-                            <div>
-                                <small>Expected: {c.expectedResult || '(none)'}</small>
-                            </div>
-                            <div>
-                                <Link
-                                    to={`/projects/${projectId}/suites/${suiteId}/cases/${c.id}/runs`}
-                                >
-                                    View runs
-                                </Link>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            </Modal>
         </div>
     )
 }
