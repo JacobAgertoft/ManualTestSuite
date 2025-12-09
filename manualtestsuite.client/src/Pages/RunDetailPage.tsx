@@ -144,79 +144,56 @@ const RunDetailPage = () => {
                     {run.results.map((r) => {
                         const edit = editingResults[r.id] || r
                         return (
-                            <li key={r.id}>
-                                <strong>{r.testCase?.title ?? 'Unnamed test case'}</strong>
-                                <div>
-                                    <small>Steps: {r.testCase?.steps || '(none)'}</small>
-                                </div>
-                                <div>
-                                    <small>
-                                        Expected: {r.testCase?.expectedResult || '(none)'}
-                                    </small>
+                            <li key={r.id} className="run-case-card">
+                                <div className="run-case-title">{r.testCase?.title}</div>
+
+                                <div className="run-case-meta">
+                                    <div><strong>Steps:</strong> {r.testCase?.steps || '(none)'}</div>
+                                    <div><strong>Expected:</strong> {r.testCase?.expectedResult || '(none)'}</div>
                                 </div>
 
-                                <div style={{ marginTop: 8 }}>
-                                    <label>
-                                        Result{' '}
-                                        <select
-                                            value={edit.result}
-                                            onChange={(e) =>
-                                                updateLocalResult(r.id, { result: e.target.value })
-                                            }
-                                        >
-                                            <option value="NotRun">Not run</option>
-                                            <option value="Passed">Passed</option>
-                                            <option value="Failed">Failed</option>
-                                            <option value="Blocked">Blocked</option>
-                                        </select>
-                                    </label>
-                                </div>
+                                <label className="run-case-label">Result</label>
+                                <select
+                                    className="run-case-field"
+                                    value={edit.result}
+                                    onChange={(e) => updateLocalResult(r.id, { result: e.target.value })}
+                                >
+                                    <option value="NotRun">Not run</option>
+                                    <option value="Passed">Passed</option>
+                                    <option value="Failed">Failed</option>
+                                    <option value="Blocked">Blocked</option>
+                                </select>
 
-                                <div>
-                                    <label>
-                                        Comment
-                                        <textarea
-                                            value={edit.comment ?? ''}
-                                            onChange={(e) =>
-                                                updateLocalResult(r.id, { comment: e.target.value })
-                                            }
-                                            rows={2}
-                                        />
-                                    </label>
-                                </div>
+                                <label className="run-case-label">Comment</label>
+                                <textarea
+                                    className="run-case-field"
+                                    rows={2}
+                                    value={edit.comment ?? ''}
+                                    onChange={(e) => updateLocalResult(r.id, { comment: e.target.value })}
+                                />
 
-                                <div>
-                                    <label>
-                                        Executed by
-                                        <input
-                                            value={edit.executedBy ?? ''}
-                                            onChange={(e) =>
-                                                updateLocalResult(r.id, {
-                                                    executedBy: e.target.value,
-                                                })
-                                            }
-                                        />
-                                    </label>
-                                </div>
+                                <label className="run-case-label">Executed by</label>
+                                <input
+                                    className="run-case-field"
+                                    value={edit.executedBy ?? ''}
+                                    onChange={(e) => updateLocalResult(r.id, { executedBy: e.target.value })}
+                                />
 
                                 {r.executedAt && (
-                                    <div>
-                                        <small>
-                                            Last updated at{' '}
-                                            {new Date(r.executedAt).toLocaleString()}
-                                        </small>
+                                    <div className="run-case-meta">
+                                        <small>Last updated at {new Date(r.executedAt).toLocaleString()}</small>
                                     </div>
                                 )}
 
                                 <button
                                     type="button"
-                                    className="primary-button"
-                                    style={{ marginTop: 8 }}
+                                    className="primary-button run-save-button"
                                     onClick={() => saveResult(r.id)}
                                 >
                                     Save
                                 </button>
                             </li>
+
                         )
                     })}
                 </ul>
