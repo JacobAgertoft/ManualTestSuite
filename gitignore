@@ -1,0 +1,59 @@
+## Ignore Visual Studio / Rider / VS Code files
+.vs/
+.idea/
+.vscode/
+
+## Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Ignore build output directories
+bin/
+obj/
+out/
+
+## Ignore test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## Ignore NuGet packages (optional if using PackageReference)
+packages/
+*.nupkg
+*.snupkg
+
+## Ignore Rider & ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## Ignore publish output
+**/publish/
+
+## Ignore logs
+*.log
+
+## Ignore OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Ignore environment files
+.env
+.env.*
+
+## Ignore database files
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+## Ignore secrets
+secrets.json
+appsettings.*.json
+
+## Ignore dotnet tools
+.dotnet/

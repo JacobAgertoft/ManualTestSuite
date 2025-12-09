@@ -1,0 +1,125 @@
+/* Main layout */
+.projects-container {
+    display: flex;
+    gap: 32px;
+    padding: 24px;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+}
+
+/* Column styling */
+.column {
+    flex: 1;
+    min-width: 260px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+    .column h1,
+    .column h2 {
+        margin-top: 0;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 6px;
+    }
+
+/* Forms */
+form {
+    margin-bottom: 16px;
+}
+
+    form label {
+        font-weight: bold;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+button {
+    background: #0078ff;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #005fcc;
+    }
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 6px 4px;
+    margin-bottom: 6px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+    li:hover {
+        background: #f0f0f0;
+    }
+
+    li button {
+        margin-right: 6px;
+        background: transparent;
+        color: #0078ff;
+        border: none;
+        font-weight: bold;
+        padding: 0;
+        cursor: pointer;
+    }
+
+        li button:hover {
+            text-decoration: underline;
+        }
+
+/* Status styling */
+.status {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.run-item {
+    padding: 6px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 6px;
+}
+
+/* Passed / Failed colors */
+.result-passed {
+    color: green;
+    font-weight: bold;
+}
+
+.result-failed {
+    color: red;
+    font-weight: bold;
+}
+
+.result-blocked {
+    color: #c27c00;
+    font-weight: bold;
+}
+
+.result-notrun {
+    color: gray;
+    font-weight: bold;
+}
