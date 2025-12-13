@@ -12,6 +12,8 @@ namespace ManualTestSuite.Server.Context
         public DbSet<Project> Projects => Set<Project>();
         public DbSet<TestSuite> TestSuites => Set<TestSuite>();
         public DbSet<TestCase> TestCases => Set<TestCase>();
+
         public DbSet<TestRun> TestRuns => Set<TestRun>();
+        public DbSet<TestRunResult> TestRunResults => Set<TestRunResult>();
     }
 }

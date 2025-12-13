@@ -114,13 +114,20 @@ const SuiteRunsPage = () => {
                                     {r.createdBy ? ` by ${r.createdBy}` : ''}
                                 </small>
                             </div>
-                            <div>
+                            <div className="run-actions">
                                 <Link
+                                    className="run-link"
                                     to={`/projects/${projectId}/suites/${suiteId}/runs/${r.id}`}
                                 >
                                     Open run
                                 </Link>
+
+                                <Link to={`/projects/${projectId}/suites/${suiteId}/runs/${r.id}?tab=overview`}>
+                                    Overview
+                                </Link>
+
                             </div>
+
                         </li>
                     ))}
                 </ul>

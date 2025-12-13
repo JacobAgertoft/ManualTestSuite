@@ -4,16 +4,13 @@ namespace ManualTestSuite.Server.Models
     {
         public int Id { get; set; }
 
-        public int TestCaseId { get; set; }
-        public TestCase? TestCase { get; set; }
+        public int TestSuiteId { get; set; }
+        public TestSuite? TestSuite { get; set; }
 
-        public DateTime ExecutedAt { get; set; } = DateTime.UtcNow;
+        public string Name { get; set; } = string.Empty; // e.g. "Run 1", "Smoke 2025-01-10"
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public string? CreatedBy { get; set; }
 
-        // e.g. "Passed", "Failed", "Blocked"
-        public string Result { get; set; } = "NotRun";
-
-        public string? Comment { get; set; }
-
-        public string? ExecutedBy { get; set; } // optional
+        public ICollection<TestRunResult> Results { get; set; } = new List<TestRunResult>();
     }
 }

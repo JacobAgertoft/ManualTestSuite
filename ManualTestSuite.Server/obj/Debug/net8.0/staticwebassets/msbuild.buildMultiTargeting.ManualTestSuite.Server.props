@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ManualTestSuite.Server.props" />
+</Project>

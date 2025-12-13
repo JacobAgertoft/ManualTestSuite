@@ -1,84 +1,60 @@
 using ManualTestSuite.Server.Context;
-using ManualTestSuite.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
-namespace ManualTestSuite.Server.Controllers
+[ApiController]
+[Route("api/test-runs")]
+public class TestRunController : ControllerBase
 {
-    [ApiController]
-    [Route("api/projects/{projectId:int}/testsuites/{suiteId:int}/testcases/{caseId:int}/[controller]")]
-    public class TestRunsController : ControllerBase
+    private readonly AppDbContext _db;
+    public TestRunController(AppDbContext db) => _db = db;
+
+    [HttpGet("overview")]
+    public async Task<ActionResult<List<TestRunOverviewDto>>> GetOverview(
+        [FromQuery] int? runId,
+        [FromQuery] int? testSuiteId,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20)
     {
-        private readonly AppDbContext _db;
+        if (page < 1) page = 1;
+        if (pageSize is < 1 or > 200) pageSize = 20;
 
-        public TestRunsController(AppDbContext db)
-        {
-            _db = db;
-        }
+        var q = _db.TestRuns
+            .AsNoTracking()
+            .Include(r => r.TestSuite)
+            .AsQueryable();
 
-        // GET: /api/projects/{projectId}/testsuites/{suiteId}/testcases/{caseId}/testruns
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<TestRun>>> GetByCase(
-            int projectId,
-            int suiteId,
-            int caseId)
-        {
-            var testCase = await _db.TestCases
-                .Include(c => c.TestSuite)
-                .ThenInclude(s => s.Project)
-                .FirstOrDefaultAsync(c =>
-                    c.Id == caseId &&
-                    c.TestSuiteId == suiteId &&
-                    c.TestSuite!.ProjectId == projectId);
+        if (runId.HasValue)
+            q = q.Where(r => r.Id == runId.Value);
 
-            if (testCase == null)
+        if (testSuiteId.HasValue)
+            q = q.Where(r => r.TestSuiteId == testSuiteId.Value);
+
+        var items = await q
+            .OrderByDescending(r => r.CreatedAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(r => new TestRunOverviewDto
             {
-                return NotFound($"Test case {caseId} not found for suite {suiteId}, project {projectId}");
-            }
+                Id = r.Id,
+                TestSuiteId = r.TestSuiteId,
+                TestSuiteName = r.TestSuite != null ? r.TestSuite.Name : "",
 
-            var runs = await _db.TestRuns
-                .Where(r => r.TestCaseId == caseId)
-                .OrderByDescending(r => r.ExecutedAt)
-                .ToListAsync();
+                Name = r.Name,
+                CreatedAt = r.CreatedAt,
+                CreatedBy = r.CreatedBy,
 
-            return Ok(runs);
-        }
+                TotalTests = r.Results.Count(),
+                PassedCount = r.Results.Count(x => x.Result == "Passed"),
+                FailedCount = r.Results.Count(x => x.Result == "Failed"),
+                BlockedCount = r.Results.Count(x => x.Result == "Blocked"),
+                NotRunCount = r.Results.Count(x => x.Result == "NotRun"),
 
-        // POST: /api/projects/{projectId}/testsuites/{suiteId}/testcases/{caseId}/testruns
-        [HttpPost]
-        public async Task<ActionResult<TestRun>> Create(
-            int projectId,
-            int suiteId,
-            int caseId,
-            TestRun run)
-        {
-            var testCase = await _db.TestCases
-                .Include(c => c.TestSuite)
-                .FirstOrDefaultAsync(c =>
-                    c.Id == caseId &&
-                    c.TestSuiteId == suiteId &&
-                    c.TestSuite!.ProjectId == projectId);
+                LastExecutedAt = r.Results.Max(x => x.ExecutedAt)
+            })
+            .ToListAsync();
 
-            if (testCase == null)
-            {
-                return NotFound($"Test case {caseId} not found for suite {suiteId}, project {projectId}");
-            }
-
-            run.TestCaseId = caseId;
-            if (run.ExecutedAt == default)
-            {
-                run.ExecutedAt = DateTime.UtcNow;
-            }
-            if (string.IsNullOrEmpty(run.Result))
-            {
-                run.Result = "NotRun";
-            }
-
-            _db.TestRuns.Add(run);
-            await _db.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetByCase),
-                new { projectId, suiteId, caseId }, run);
-        }
+        return Ok(items);
     }
 }
