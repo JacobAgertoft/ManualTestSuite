@@ -61,5 +61,62 @@ namespace ManualTestSuite.Server.Controllers
             return CreatedAtAction(nameof(GetBySuite),
                 new { projectId = projectId, suiteId = suiteId }, testCase);
         }
+
+        // PUT: /api/projects/{projectId}/testsuites/{suiteId}/testcases/{testCaseId}
+        [HttpPut("{testCaseId}")]
+        public async Task<ActionResult<TestCase>> Edit(
+            int projectId,
+            int suiteId,
+            int testCaseId,
+            [FromBody] TestCase edited)
+        {
+            var suiteExists = await _db.TestSuites
+                .AnyAsync(s => s.Id == suiteId && s.ProjectId == projectId);
+
+            if (!suiteExists)
+                return NotFound($"Test suite {suiteId} for project {projectId} not found");
+
+            var testCase = await _db.TestCases
+                .FirstOrDefaultAsync(c => c.Id == testCaseId && c.TestSuiteId == suiteId);
+
+            if (testCase == null)
+                return NotFound($"Test case {testCaseId} not found in suite {suiteId}");
+
+            // Update fields (don’t replace the row)
+            testCase.Title = edited.Title;
+            testCase.Steps = edited.Steps;
+            testCase.ExpectedResult = edited.ExpectedResult;
+
+            // Preserve existing status if none provided, otherwise update it
+            if (!string.IsNullOrWhiteSpace(edited.Status))
+                testCase.Status = edited.Status;
+            else if (string.IsNullOrWhiteSpace(testCase.Status))
+                testCase.Status = "NotRun";
+
+            await _db.SaveChangesAsync();
+
+            return Ok(testCase);
+        }
+
+        // DELETE: /api/projects/{projectId}/testsuites/{suiteId}/testcases/{testCaseId}
+        [HttpDelete("{testCaseId:int}")]
+        public async Task<IActionResult> Delete(
+            int projectId,
+            int suiteId,
+            int testCaseId)
+        {
+            var testCase = await _db.TestCases
+                .FirstOrDefaultAsync(tc =>
+                    tc.Id == testCaseId &&
+                    tc.TestSuiteId == suiteId);
+
+            if (testCase == null)
+                return NotFound($"Test case {testCaseId} not found in suite {suiteId}");
+
+            _db.TestCases.Remove(testCase);
+            await _db.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }

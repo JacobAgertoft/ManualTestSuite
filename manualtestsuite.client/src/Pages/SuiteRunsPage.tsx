@@ -121,7 +121,8 @@ const SuiteRunsPage = () => {
                                 >
                                     Open run
                                 </Link>
-
+                            </div>
+                            <div>
                                 <Link to={`/projects/${projectId}/suites/${suiteId}/runs/${r.id}?tab=overview`}>
                                     Overview
                                 </Link>
