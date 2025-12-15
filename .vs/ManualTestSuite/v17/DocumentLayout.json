@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\pages\\suitespage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\pages\\suitespage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testruncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\testruncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\projects.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\projects.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testcasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\testcasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testsuitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\testsuitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\pages\\testcasespage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\pages\\testcasespage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testcasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\testcasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\models\\testsuite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\models\\testsuite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\pages\\suiterunspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -27,28 +55,8 @@
       "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\pages\\rundetailpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\pages\\edittestcase.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\pages\\edittestcase.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\pages\\projectspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\pages\\projectspage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\pages\\suitespage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\pages\\suitespage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\models\\testsuite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\models\\testsuite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testruncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\testruncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -77,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\models\\testrunresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\models\\testrunresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testsuitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\testsuitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\testsuiterunscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,14 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.client\\src\\projects.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{F33F5F22-7165-4B20-8B6C-177DDACA4383}|manualtestsuite.client\\manualtestsuite.client.esproj|solutionrelative:manualtestsuite.client\\src\\projects.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|solutionrelative:manualtestsuite.server\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56808BC5-BB52-4B4A-8C73-D45D44A09B5A}|ManualTestSuite.Server\\ManualTestSuite.Server.csproj|c:\\users\\jacob\\documents\\projects\\manualtestsuite\\manualtestsuite.server\\manualtestsuite.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -158,23 +154,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TestRunOverviewPage.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwDYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-13T18:39:39.977Z"
+              "DocumentIndex": 2,
+              "Title": "TestRunController.cs",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestRunController.cs",
+              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestRunController.cs",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestRunController.cs",
+              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\TestRunController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T18:30:59.526Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\App.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\App.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\App.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-09T17:06:02.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Projects.css",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Projects.css",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Projects.css",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Projects.css",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Projects.css",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAIwPQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-09T18:35:25.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "TestRunsPage.tsx",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestRunsPage.tsx",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\TestRunsPage.tsx",
@@ -187,28 +210,105 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SuiteRunsPage.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "DocumentIndex": 15,
+              "Title": "TestRunOverviewPage.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\TestRunOverviewPage.tsx",
+              "ViewState": "AQIAABoAAAAAAAAAAAAQwDYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-09T22:46:37.849Z",
+              "WhenOpened": "2025-12-13T18:39:39.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TestSuiteController.cs",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
+              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
+              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T18:18:58.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAIwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T17:15:39.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Models\\Project.cs",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\Project.cs",
+              "RelativeToolTip": "ManualTestSuite.Server\\Models\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T17:01:52.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProjectsPage.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-09T21:35:17.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SuitesPage.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAmwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-09T21:35:42.053Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "RunDetailPage.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPkAAAAwAAAA",
+              "Title": "TestCasesController.cs",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
+              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
+              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T18:25:12.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TestCasesPage.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAAAL8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-09T22:47:23.36Z",
+              "WhenOpened": "2025-12-09T21:37:21.116Z",
               "EditorCaption": ""
             },
             {
@@ -226,121 +326,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestCasesPage.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\TestCasesPage.tsx",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAQwLoAAAAfAAAA",
+              "DocumentIndex": 12,
+              "Title": "RunDetailPage.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\RunDetailPage.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-09T21:37:21.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SuitesPage.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\SuitesPage.tsx",
-              "ViewState": "AQIAAFAAAAAAAAAAAAASwGoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-09T21:35:42.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProjectsPage.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\ProjectsPage.tsx",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-09T21:35:17.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestCasesController.cs",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
-              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
-              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\TestCasesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T18:25:12.593Z",
+              "WhenOpened": "2025-12-09T22:47:23.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "TestRunController.cs",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestRunController.cs",
-              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestRunController.cs",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestRunController.cs",
-              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\TestRunController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCIAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T18:30:59.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "App.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\App.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\App.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\App.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\App.tsx",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCAAAAAWAAAA",
+              "Title": "SuiteRunsPage.tsx",
+              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
+              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
+              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
+              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\SuiteRunsPage.tsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-09T17:06:02.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EditTestCase.tsx",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\EditTestCase.tsx",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Pages\\EditTestCase.tsx",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Pages\\EditTestCase.tsx",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Pages\\EditTestCase.tsx",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-15T18:36:43.857Z",
+              "WhenOpened": "2025-12-09T22:46:37.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Projects.css",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Projects.css",
-              "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Projects.css",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Projects.css",
-              "RelativeToolTip": "manualtestsuite.client\\src\\Projects.css",
-              "ViewState": "AQIAAMUAAAAAAAAAAAAIwM4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-09T18:35:25.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TestSuiteController.cs",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
-              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
-              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\TestSuiteController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAC4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T18:18:58.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "main.tsx",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\main.tsx",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\main.tsx",
@@ -352,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "testRunsApi.ts",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\testRunsApi.ts",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\testRunsApi.ts",
@@ -364,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "TestSuiteRunsController.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestSuiteRunsController.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestSuiteRunsController.cs",
@@ -376,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "TestRunOverviewDto.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\TestRunOverviewDto.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Models\\TestRunOverviewDto.cs",
@@ -388,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\appsettings.json",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\appsettings.json",
@@ -400,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "TestRunResult.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\TestRunResult.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Models\\TestRunResult.cs",
@@ -412,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TestRunResultsController.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\TestRunResultsController.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\TestRunResultsController.cs",
@@ -424,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Program.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Program.cs",
@@ -436,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "TestRun.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\TestRun.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Models\\TestRun.cs",
@@ -448,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "TestCase.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\TestCase.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Models\\TestCase.cs",
@@ -460,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Modal.tsx",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\components\\Modal.tsx",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\components\\Modal.tsx",
@@ -472,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Modal.css",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\components\\Modal.css",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\components\\Modal.css",
@@ -484,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Context\\AppDbContext.cs",
@@ -496,19 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\Project.cs",
-              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Models\\Project.cs",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Models\\Project.cs",
-              "RelativeToolTip": "ManualTestSuite.Server\\Models\\Project.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T17:01:52.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "launch.json",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\.vscode\\launch.json",
               "RelativeDocumentMoniker": "manualtestsuite.client\\.vscode\\launch.json",
@@ -520,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "vite.config.ts",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\vite.config.ts",
               "RelativeDocumentMoniker": "manualtestsuite.client\\vite.config.ts",
@@ -532,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Projects.tsx",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\Projects.tsx",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\Projects.tsx",
@@ -544,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "ManualTestSuite.Server.csproj",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\ManualTestSuite.Server.csproj",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\ManualTestSuite.Server.csproj",
@@ -556,19 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ProjectsController.cs",
-              "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
-              "RelativeDocumentMoniker": "ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
-              "ToolTip": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
-              "RelativeToolTip": "ManualTestSuite.Server\\Controllers\\ProjectsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T17:15:39.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\Properties\\launchSettings.json",
@@ -580,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "ManualTestSuite.Server",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\ManualTestSuite.Server.csproj",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\ManualTestSuite.Server.csproj",
@@ -591,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "App.tsx",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\manualtestsuite.client\\src\\App.tsx",
               "RelativeDocumentMoniker": "manualtestsuite.client\\src\\App.tsx",
@@ -603,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "ManualTestSuite.Server.http",
               "DocumentMoniker": "C:\\Users\\jacob\\Documents\\Projects\\ManualTestSuite\\ManualTestSuite.Server\\ManualTestSuite.Server.http",
               "RelativeDocumentMoniker": "ManualTestSuite.Server\\ManualTestSuite.Server.http",

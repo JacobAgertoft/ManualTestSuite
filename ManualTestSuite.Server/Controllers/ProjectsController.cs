@@ -27,6 +27,16 @@ namespace ManualTestSuite.Api.Controllers
             return Ok(projects);
         }
 
+        // GET: /api/projects/{id}
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Project>> GetProjectById(int id)
+        {
+            var project = await _db.Projects.FirstOrDefaultAsync(p => p.Id == id);
+            if (project == null) return NotFound($"Project {id} not found");
+            return Ok(project);
+        }
+
+
         // POST: /api/projects
         [HttpPost]
         public async Task<ActionResult<Project>> Create(Project project)

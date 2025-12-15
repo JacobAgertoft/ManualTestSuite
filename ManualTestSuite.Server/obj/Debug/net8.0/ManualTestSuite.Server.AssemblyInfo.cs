@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ManualTestSuite.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e302d0d110d65b09b15e4ef235643db528a9b19c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb60265f6240b64714f76016a3bb1945d0a81dd7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ManualTestSuite.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ManualTestSuite.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

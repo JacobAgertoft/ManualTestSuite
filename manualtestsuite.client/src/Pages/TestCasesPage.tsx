@@ -15,6 +15,7 @@ const TestCasesPage = () => {
     const { projectId, suiteId } = useParams()
     const navigate = useNavigate()
 
+    const [suiteName, setSuiteName] = useState<string | null>(null)
     const [cases, setCases] = useState<TestCase[]>([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
@@ -29,6 +30,21 @@ const TestCasesPage = () => {
     const [editingCaseId, setEditingCaseId] = useState<number | null>(null)
 
     const [query, setQuery] = useState('')
+
+    const loadSuiteName = async () => {
+        if (!projectId || !suiteId) return
+
+        try {
+            const res = await fetch(`/api/projects/${projectId}/testsuites`)
+            if (!res.ok) throw new Error(`Status ${res.status}`)
+            const suites = await res.json()
+
+            const match = suites.find((s: any) => String(s.id) === String(suiteId))
+            setSuiteName(match?.name ?? '')
+        } catch {
+            setSuiteName('')
+        }
+    }
 
     const filteredCases = cases.filter((c) => {
         const q = query.trim().toLowerCase()
@@ -61,6 +77,7 @@ const TestCasesPage = () => {
 
     useEffect(() => {
         loadCases()
+        loadSuiteName()
     }, [projectId, suiteId])
 
 
@@ -169,7 +186,10 @@ const TestCasesPage = () => {
                     </button>
                 </div>
 
-                <h2>Test Cases for project {projectId}, suite {suiteId}</h2>
+                <h2>
+                    Test Cases for {suiteName ?? `Suite ${suiteId}`}
+                </h2>
+
 
                 {loading && <p>Loading test cases…</p>}
                 {error && <p style={{ color: 'red' }}>Error: {error}</p>}
@@ -208,16 +228,10 @@ const TestCasesPage = () => {
                             <div><small>Steps: {c.steps || '(none)'}</small></div>
                             <div><small>Expected: {c.expectedResult || '(none)'}</small></div>
                             <div>
-                                <button type="button" onClick={() => openEditModal(c)}>
+                                <button className="edit-button" type="button" onClick={() => openEditModal(c)}> 
                                     Edit
                                 </button>
-                                <button
-                                    type="button"
-                                    onClick={() => onDeleteCase(c.id)}
-                                    style={{ marginLeft: 8, color: 'red' }}
-                                >
-                                    Delete
-                                </button>
+                                <button className="delete-button" type="button" onClick={() => onDeleteCase(c.id)}>Delete</button>
                             </div>
                         </li>
                     ))}

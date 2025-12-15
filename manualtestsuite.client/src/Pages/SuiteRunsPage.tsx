@@ -14,6 +14,7 @@ const SuiteRunsPage = () => {
     const { projectId, suiteId } = useParams()
     const navigate = useNavigate()
 
+    const [suiteName, setSuiteName] = useState<string | null>(null)
     const [runs, setRuns] = useState<TestRun[]>([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
@@ -40,8 +41,24 @@ const SuiteRunsPage = () => {
         }
     }
 
+    const loadSuiteName = async () => {
+        if (!projectId || !suiteId) return
+
+        try {
+            const res = await fetch(`/api/projects/${projectId}/testsuites`)
+            if (!res.ok) throw new Error(`Status ${res.status}`)
+            const suites = await res.json()
+
+            const match = suites.find((s: any) => String(s.id) === String(suiteId))
+            setSuiteName(match?.name ?? '')
+        } catch {
+            setSuiteName('')
+        }
+    }
+
     useEffect(() => {
         loadRuns()
+        loadSuiteName()
     }, [projectId, suiteId])
 
     const onCreateRun = async (e: FormEvent) => {
@@ -98,7 +115,7 @@ const SuiteRunsPage = () => {
                 </div>
 
                 <h2>
-                    Runs for project {projectId}, suite {suiteId}
+                    Test runs for {suiteName ?? `Suite ${suiteId}`}
                 </h2>
 
                 {loading && <p>Loading runs…</p>}

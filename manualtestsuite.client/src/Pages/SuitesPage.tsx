@@ -12,6 +12,7 @@ type TestSuite = {
 const SuitesPage = () => {
     const { projectId } = useParams()
     const navigate = useNavigate()
+    const [projectName, setProjectName] = useState<string | null>(null)
     const [suites, setSuites] = useState<TestSuite[]>([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
@@ -36,8 +37,23 @@ const SuitesPage = () => {
         }
     }
 
+    const loadProjectName = async () => {
+      if (!projectId) return
+
+      try {
+        const res = await fetch(`/api/projects/${projectId}`)
+        if (!res.ok) throw new Error(`Status ${res.status}`)
+
+        const project = await res.json()
+        setProjectName(project.name ?? '')
+      } catch {
+        setProjectName('')
+      }
+    }
+
     useEffect(() => {
         loadSuites()
+        loadProjectName()
     }, [projectId])
 
     const onCreateSuite = async (e: FormEvent) => {
@@ -90,7 +106,7 @@ const SuitesPage = () => {
                     </button>
                 </div>
 
-                <h2>Test Suites for project {projectId}</h2>
+                <h2>Test suites for {projectName ?? `Project ${projectId}`}</h2>
 
                 {loading && <p>Loading suites…</p>}
                 {error && <p style={{ color: 'red' }}>Error: {error}</p>}

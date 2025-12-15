@@ -239,4 +239,32 @@ li {
     opacity: 1;
 }
 
+.delete-button {
+    margin-left: 8px;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: none;
+    text-decoration: none;
+    color: darkred;
+}
+
+.edit-button {
+    margin-left: 8px;
+    color: blue;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background: none;
+    text-decoration: none;
+    color: darkred;
+}
+
 
