@@ -202,3 +202,41 @@ li {
     margin: 0 auto;
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 342px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.search-icon {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.clear-button {
+    background: none;
+    color: red;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.clear-button:hover {
+    background: none;
+    opacity: 1;
+}
+
+

@@ -28,6 +28,21 @@ const TestCasesPage = () => {
 
     const [editingCaseId, setEditingCaseId] = useState<number | null>(null)
 
+    const [query, setQuery] = useState('')
+
+    const filteredCases = cases.filter((c) => {
+        const q = query.trim().toLowerCase()
+        if (!q) return true
+
+        return (
+            c.title.toLowerCase().includes(q) ||
+            (c.steps ?? '').toLowerCase().includes(q) ||
+            (c.expectedResult ?? '').toLowerCase().includes(q) ||
+            (c.status ?? '').toLowerCase().includes(q)
+        )
+    })
+
+
     const loadCases = async () => {
         if (!projectId || !suiteId) return
         try {
@@ -158,9 +173,31 @@ const TestCasesPage = () => {
 
                 {loading && <p>Loading test cases…</p>}
                 {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+                <div className="search-container">
+                    <span className="search-icon">🔍</span>
+
+                    <input
+                        className="search-input"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Search test cases…"
+                        style={{ width: '1000%', padding: 8 }}
+                    />
+
+                    {query && (
+                        <button
+                            type="button"
+                            className="clear-button"
+                            onClick={() => setQuery('')}
+                            aria-label="Clear search"
+                        >
+                            ✕
+                        </button>
+                    )}
+                </div>
 
                 <ul>
-                    {cases.map((c) => (
+                    {filteredCases.map((c) => (
                         <li key={c.id}>
                             <strong>{c.title}</strong>{' '}
                             {c.status && c.status !== 'NotRun' && (
